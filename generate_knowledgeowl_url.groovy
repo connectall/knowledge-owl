@@ -5,11 +5,9 @@
 - Purpose: Use a collection of fields from an Article Version to create a full web link to the Article Version
 - Execution Policy: PreMapValues
 - Field mapping setup:
-    1. Map the KnowledgeOwl Article Version's project_id to any string or rich text field on the destination application
-    2. Map the KnowledgeOwl Article Version's article_id to _DO_NOT_SYNC
-    3. Map the KnowledgeOwl Article Version's id to _DO_NOT_SYNC
-    4. Map the KnowledgeOwl Article Version's current_version_en_title to _DO_NOT_SYNC
-    5. Map the KnowledgeOwl Article Version's version_number to _DO_NOT_SYNC
+    1. Map the KnowledgeOwl Article Version's current_version_en_title to the title field of the destination application
+    2. Map the KnowledgeOwl Article Version's project_id to any string or rich text field on the destination application
+    3. Map the KnowledgeOwl Article Version's version_number to _DO_NOT_SYNC
 */
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -33,7 +31,7 @@ def _srcAppKey = srcappInstance.getType()
 def _destAppKey = destappInstance.getType()
 
 //Define which application this rule should apply to 
-def _srcAppToApplyRule = "knowledge-owl";
+def _srcAppToApplyRule = "ua-knowledge-owl";
 
 logger.info("URL rule should only apply to: " + _srcAppToApplyRule);
 logger.info("Current source application: " + _srcAppKey)
