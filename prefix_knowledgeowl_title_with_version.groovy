@@ -30,7 +30,7 @@ def _srcAppKey = srcappInstance.getType()
 def _destAppKey = destappInstance.getType()
 
 //Define which application this rule should apply to 
-def _srcAppToApplyRule = "knowledge-owl";
+def _srcAppToApplyRule = "ua-knowledge-owl";
 
 logger.info("Prefix rule should only apply to: " + _srcAppToApplyRule);
 logger.info("Current source application: " + _srcAppKey)
