@@ -15,9 +15,6 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import com.go2group.connectall.config.model.ConnectAllConfig
 import com.go2group.connectall.config.model.ApplicationInstance
-import com.go2group.connectall.config.model.DataDictionary
-import com.go2group.connectall.config.model.bean.FieldValue
-import com.go2group.connectall.config.model.bean.Name
 
 Logger logger  = LogManager.getLogger("com.go2group.connectall.model.transformer.model.api.knowledge-owl-url");
 logger.info("~~~Processing KnowledgeOwl URL Rule~~~")
