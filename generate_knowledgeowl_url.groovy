@@ -46,7 +46,7 @@ if(_srcAppKey.equalsIgnoreCase(_srcAppToApplyRule)) {
 	logger.info("Source matches. Proceeding with creating a URL.");
 	
 	//define the field that will be overwritten in the mapping
-  def fieldToOverwrite = "project_id";
+	def fieldToOverwrite = "project_id";
 	
 	//*** CHANGE the baseURL field below to the actual URL of the Knowledge Base
 	//Final URL should look like <a href="https://app.knowledgeowl.com/kb/article/id/project_id/aid/article_id/language/en/version/version_id">Link to Version Number</a>
