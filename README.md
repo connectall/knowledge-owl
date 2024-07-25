@@ -1,4 +1,4 @@
-# knowledge-owl
+# ua-knowledge-owl
 Universal Adapter for KnowledgeOwl
 
 Entities supported:
