@@ -51,8 +51,8 @@ if(_srcAppKey.equalsIgnoreCase(_srcAppToApplyRule)) {
 	def versionId = message.payload.getSingleValueField("id");
 	def title = message.payload.getSingleValueField("current_version_en_title");
 	def versionNumber = message.payload.getSingleValueField("version_number");
-	def newURL =  "Link to Article: <a href=\"" + baseURL + projectId + "/aid/" + articleId + "/language/en/version/" + versionId + "\">" + title + " | Version " + versionNumber + "</a>";
-	logger.info("URL is: " + newURL);
+	//def newURL =  "Link to Article Version: <a href=\"" + baseURL + projectId + "/aid/" + articleId + "/language/en/version/" + versionId + "\">" + title + " | Version " + versionNumber + "</a>"; logger.info("URL is: " + newURL);
+ 	def newURL = "Link to Article Version " + versionNumber + ": " + baseURL + projectId + "/aid/" + articleId + "/language/en/version/" + versionId;
     
 	//overwrite the chosen field with the new URL
 	message.payload.setSingleValueField(fieldToOverwrite,newURL);
